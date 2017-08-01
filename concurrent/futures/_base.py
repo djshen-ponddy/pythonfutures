@@ -378,7 +378,7 @@ class Future(object):
                 exception_type = self._exception.__class__
             else:
                 exception_type = type(self._exception)
-            raise exception_type, self._exception, self._traceback
+            raise Exception(str(self._exception))
         else:
             return self._result
 
